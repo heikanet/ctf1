@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第一关</title>
+	<style type="text/css">
+#qj{
+	border: 1px solid red;
+	height: 300px;
+}
+#qj h2{
+text-align: left;
+}
+#tm{
+	width: 400px;
+	height: 200px;
+	border: 1px solid gray;
+	float: left;
+}
+#yes{
+	float: left;
+	width: 400px;
+	height: 200px;
+	margin-left: 100px;
+} 
+#yes p{
+	font-size: 30px;
+}
+#foot{
+	width: 100%;
+	height: 80px;
+	border: 1px solid gray;
+	float: left;
+    background-color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+
+   </style>
+<script type="text/javascript">
+	function go(){
+		var good = "\x31\x39\x39\x38\x30\x35\x32\x30"
+		var maybe = document.getElementById("pass").value
+		if (maybe == good) {
+			document.getElementById("g1").innerHTML="恭喜你通过第一关！";
+			document.getElementById("g3").innerHTML="你成功登录到了后台，获取了管理员权限，你开始了进一步探索...";
+			document.getElementById("g2").innerHTML='<a href="\x68\x74\x7a\x74\x78\x2e\x68\x74\x6d\x6c">点击进入下一关</a>';
+
+		} else {
+			alert("登录失败！")
+		}
+		
+	}
+
+
+
+</script>
+
+<script> 
+document.oncontextmenu=new Function("return false") 
+document.onselectstart=new Function("return false") 
+
+</script>
+
+<script language="javascript">
+function testKeyDown(event)
+{ 
+if ((event.keyCode == 123)) //屏蔽 F12
+{
+event.keyCode = 0; 
+event.returnValue = false;
+}
+}
+document.onkeydown = function(){testKeyDown(event);}
+window.onhelp = function(){return false;}
+</script>
+
+</head>
+<body>
+    <div id="qj">
+<table width="937" border="0">
+    <h2>情景1：</h2>
+  <tr>
+    <td width="332" height="164"><ul>
+      <li>姓名：小明</li>
+      <li>性别：男</li>
+      <li>爱好：LOL</li>
+      <li>性格：内向</li>
+      <li>生日：1998年05月20日</li>
+    </ul></td>
+    <td width="595"><p>小明是一家公司的运维，某天他管理的系统的后台被黑客破解了</p>
+    <p>小明想知道黑客是怎么做到的，于是便请你假装成黑客，去尝试破解他的后台</p></td>
+  </tr>
+</table>
+ <p>tips:没有绝对安全的系统，漏洞往往出在人身上</p>
+ <br><br><br>
+ <div id="tm">
+ <h3>后台登录页面</h3>
+ 	<form>
+ 	    用户名：<input name="username" value="admin" id="user"></input>
+ 	    <br><br>
+ 		密  &nbsp码：<input name="password" type="password" id="pass"></input>
+        <input type="button" value="登录" onclick="go();"></input>
+ 	</form>
+ </div>
+<div id="yes">
+	<p id="g1"></p>
+	<h4 id="g3"></h4>
+	<p id="g2"></p>
+</div>
+
+<div id="foot">
+	<p>浙江工商职业技术学院&nbsp&nbsp&nbsp&nbsp&nbsp信息安全协会版权所有</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二关</title>
+	<style type="text/css">
+#qj{
+	width: 50%;
+	height: 550px;
+	border: 1px solid red;
+	float: left;
+}
+#tm{
+	float: left;
+	border: 1px solid gray;
+	width: 49%;
+	height: 250px;
+}
+#yes{
+	float: left;
+}
+#yes p{
+	font-size: 30px;
+}
+#foot{
+	width: 100%;
+	height: 80px;
+	border: 1px solid gray;
+	float: left;
+    background-color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+   </style>
+<script type="text/javascript">
+   	function go(){
+       var good = "\u6211\u80d6\u864e\u5c31\u662f\u53e3\u4ee4";
+       var maybe = document.getElementById("kl").value;
+       if (maybe == good) {
+			document.getElementById("g1").innerHTML="恭喜你通过第二关！";
+			document.getElementById("g3").innerHTML="你成功的进入到了灰色空间，接下来等着你的又是什么呢...";
+			document.getElementById("g2").innerHTML='<a href="\x68\x73\x6b\x6a\x77\x61\x79\x2e\x68\x74\x6d\x6c">点击进入下一关</a>';
+
+		} else {
+			alert("口令错误，进入失败！");
+		}
+
+   	}
+
+
+   </script> 
+
+</head>
+<body>
+	<div id="qj">
+	<h2>情景2：</h2>
+		<p>当你登录到后台后，却发现后台已经被黑客篡改</p>
+		<p>并且黑客留下了一句很挑衅的话：“辣鸡，我在‘灰色空间’等你...”</p>
+		<b>WTF?!</b>&nbsp&nbsp&nbsp&nbsp"灰色空间"是啥？
+		<br>
+		<img src="images/2.jpg" width="250px" height="250px;">
+		然鹅网上搜了很久，也没有发现什么“灰色空间”进入的方法...
+		<br>
+		<p>突然，可达鸭眉头一皱，发现事情并没有那么简单</p>
+		<p>几秒钟后，你发现了“灰色空间”的入口...</p>
+	</div>
+    <div id="tm">
+    	<b>黑客篡改后的后台页面</b>
+    	<p>辣鸡，我在‘灰色空间’等你...</p>
+    	<h4>灰色空间进入口令：</h4>
+    	<input type="text" id="kl"></input>
+    	<input type="button" value="进入" onclick="go();"></input>
+        <!-- 口令：我胖虎就是口令 -->
+        <p>tips:要善于收集一切信息</p>
+    </div>
+    <div id="yes">
+	<p id="g1"></p>
+	<h4 id="g3"></h4>
+	<p id="g2"></p>
+</div>
+<div id="foot">
+	<p>浙江工商职业技术学院&nbsp&nbsp&nbsp&nbsp&nbsp信息安全协会版权所有</p>
+</div>
+</body>
+</html>

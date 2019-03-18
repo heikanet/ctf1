@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第四关</title>
+	<style type="text/css">
+#qj{
+	width: 50%;
+	height: 250px;
+	border: 1px solid red;
+	float: left;
+}
+#tm{
+	float: left;
+	border: 1px solid gray;
+	width: 49%;
+	height: 250px;
+}
+#yes{
+	float: left;
+}
+#yes p{
+	font-size: 30px;
+}
+#foot{
+	width: 100%;
+	height: 80px;
+	border: 1px solid gray;
+	float: left;
+    background-color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+
+	</style>
+	<script type="text/javascript">
+   	function go(){
+       var good = "\x31\x32\x33\x34\x35\x36\x37\x38\x39";
+       var maybe = document.getElementById("kl").value;
+       if (maybe == good) {
+			document.getElementById("g1").innerHTML="恭喜你通过第四关！";
+			document.getElementById("g3").innerHTML="黑客突然意识到自己的行为触犯了法律，自首去了。。。";
+			document.getElementById("g2").innerHTML='<a href="#">点击进入下一关</a>';
+
+		} else {
+			alert("密码错误，进入失败！");
+		}
+
+   	}
+      </script> 
+</head>
+<body>
+	<div id="qj">
+	    <h2>情景4：</h2>
+		<p>黑客：我就很嚣张地告诉你这一关的密码是：123456789</p>
+		<p>emmmm...为啥灰色空间不是灰色的。。。</p>
+		<p>好吧这不重要。。重要的是怎么通关</p>
+	</div>
+	<div id="tm">
+	<p>tips:要学会见招拆招</p>
+		通关密码：<input id="kl" type="text" maxlength="6"></input>
+		<input id="login" value="确定" type="button" onclick="go();"></input>
+	</div>
+	<div id="yes">
+	    <p id="g1"></p>
+	    <h4 id="g3"></h4>
+	    <p id="g2"></p>
+    </div>
+    <div id="foot">
+	<p>浙江工商职业技术学院&nbsp&nbsp&nbsp&nbsp&nbsp信息安全协会版权所有</p>
+</div>
+</body>
+</html>

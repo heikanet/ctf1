@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三关</title>
+	<style type="text/css">
+#qj{
+	width: 50%;
+	height: 550px;
+	border: 1px solid red;
+	float: left;
+}
+#yes{
+	float: left;
+}
+#yes p{
+	font-size: 30px;
+}
+#tm{
+	float: left;
+	border: 1px solid gray;
+	width: 49%;
+	height: 250px;
+}
+#foot{
+	width: 100%;
+	height: 80px;
+	border: 1px solid gray;
+	float: left;
+    background-color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+	</style>
+	<script type="text/javascript">
+   	function go(){
+       var good = "\x61\x64\x6d\x69\x6e";
+       var maybe = document.getElementById("kl").value;
+       if (maybe == good) {
+			document.getElementById("g1").innerHTML="恭喜你通过第三关！";
+			document.getElementById("g3").innerHTML="你终于来到了神秘的灰色空间...";
+			document.getElementById("g2").innerHTML='<a href="\x6c\x6f\x67\x69\x6e\x62\x75\x67\x2e\x68\x74\x6d\x6c">点击进入下一关</a>';
+
+		} else {
+			alert("密钥错误，进入失败！");
+		}
+
+   	}
+      </script> 
+
+</head>
+<body>
+	<div id="qj">
+		<h2>情景3：</h2>
+		<p>黑客：你以为这么容易就找到我？辣鸡！</p>
+		<p>不放一个密钥我都不好意思说自己是黑客！</p>
+		<img src="images/3.jpg">
+		<br><br>
+		<b>mmp.....怎么破？</b>
+    </div>
+
+    <div id="tm">
+    	<p>你需要输入一个密钥才能进入下一步</p>
+    	<h4>密钥：</h4>
+    	<input type="text" id="kl"></input>
+    	<input type="button" value="进入" onclick="go();"></input>
+
+<br>
+<p>tips:信息收集与解密</p>
+    </div>
+    <div id="yes">
+	    <p id="g1"></p>
+	    <h4 id="g3"></h4>
+	    <p id="g2"></p>
+    </div>
+    <div id="foot">
+	<p>浙江工商职业技术学院&nbsp&nbsp&nbsp&nbsp&nbsp信息安全协会版权所有</p>
+</div>
+</body>
+</html>
